@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript">
+function sortArrayOfStrings(_stringArray) {
+    var i = 0, k;
+    while (i < _stringArray.length) {
+        k = i + 1;
+        while (k < _stringArray.length) {
+            if (_stringArray[k] < _stringArray[i]) {
+                var temp = _stringArray[i];
+                _stringArray[i] = _stringArray[k];
+                _stringArray[k] = temp;
+            }
+            k++;
+        }
+        i++;
+    }
+    return _stringArray;
+}
+let arrayOfNames = ["George", "Veronica", "Mounika", "Shaunik"];
+console.log("Before Sorting: " + arrayOfNames );
+// usage of the function
+console.log("After Sorting: " + sortArrayOfStrings(arrayOfNames));
+</script>
+</body>
+</html>
